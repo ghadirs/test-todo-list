@@ -1,0 +1,16 @@
+.container.root-container {
+  margin: 0 1rem;
+}
+
+.root-container .row {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.root-container .row .col {
+  margin: 1rem;
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,15 @@
+.todo__box {
+  width: 100%;
+  background-color: burlywood;
+}
+
+.todo__box .container {
+  margin: 0 0.2rem;
+}
+
+.todo__box .container .row {
+  background-color: #fff;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
