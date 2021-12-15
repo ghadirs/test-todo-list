@@ -6,13 +6,24 @@ function App() {
     <div className="root-container container">
       <div className="row">
         <div className="todo-col col">
-          <TodoBox />
-        </div>
-        <div className="doing-col col">
-          <TodoBox />
-        </div>
-        <div className="done-col col">
-          <TodoBox />
+          <div className="box__title row">
+            <div className="col">
+              <h4>Todo</h4>
+            </div>
+            <TodoBox />
+          </div>
+          <div className="doing-col col">
+          <div className="box__title row">
+            <div className="col">
+              <h4>Todo</h4>
+            <TodoBox />
+          </div>
+          <div className="done-col col">
+          <div className="box__title row">
+            <div className="col">
+              <h4>Todo</h4>
+            <TodoBox />
+          </div>
         </div>
       </div>
     </div>

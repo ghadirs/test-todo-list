@@ -1,3 +1,13 @@
-.todo__box form input {
-  width: 100%;
+.box__form.row {
+}
+
+.box__form.row > form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box__form.row > .col > form > input {
+  padding: 0;
+  border: 0px;
 }

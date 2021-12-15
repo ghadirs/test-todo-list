@@ -1,11 +1,30 @@
 import React from "react";
+import { useState } from "react";
 import "./TodoForm.css";
-import { TextField } from "@mui/material";
 
-function TodoForm() {
+function TodoForm({ saveTodo }) {
+  const [value, setValue] = useState("");
+
+  const handleSubmit = (value) => {
+    return (e) => {
+      e.preventDefault();
+      // save item
+      saveTodo(value);
+
+      // clear field
+      setValue("");
+    };
+  };
+
   return (
-    <form>
-      <input type="text" name="name" placeholder="add name..." />
+    <form onSubmit={handleSubmit(value)}>
+      <input
+        onChange={(e) => setValue(e.target.value)}
+        value={value}
+        placeholder="add name..."
+        onClick={() => console.log(value)}
+      />
+      <button>+</button>
     </form>
   );
 }
