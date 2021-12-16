@@ -7,6 +7,7 @@ import reportWebVitals from "./reportWebVitals";
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <h3> Made with React and react-dnd by Ghadir Shamohamdi </h3>
   </React.StrictMode>,
   document.getElementById("root")
 );

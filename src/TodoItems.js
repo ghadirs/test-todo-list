@@ -20,6 +20,9 @@ function TodoItems({ priority, todoType, todos, saveTodo, deleteTodo }) {
                     {...provided.dragHandleProps}
                   >
                     <p>{name}</p>
+                    <span style={{ padding: "5px", backgroundColor: "#fff" }}>
+                      {priority}
+                    </span>
                     <button onClick={() => deleteTodo(index)}>-</button>
                   </div>
                 )}

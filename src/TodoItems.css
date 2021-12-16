@@ -24,6 +24,15 @@
   justify-content: space-between;
 }
 
+.list__item p {
+  margin-left: 10px;
+}
+
+.list__item span {
+  align-self: center;
+  border-radius: 15px;
+}
+
 .list__item button {
   align-self: center;
   height: 25px;

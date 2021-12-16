@@ -24,6 +24,8 @@
   justify-content: flex-start;
 }
 
-.box__form {
-  justify-content: flex-end;
+@media only screen and (max-width: 768px) {
+  .root-container.container > .row {
+    flex-direction: column;
+  }
 }
