@@ -8,5 +8,22 @@
 }
 
 .root-container > .row > .col {
+  background-color: #fff;
+  border-radius: 5px;
   margin: 1rem 1.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.root-container > .row > .col > .row {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.box__form {
+  justify-content: flex-end;
 }

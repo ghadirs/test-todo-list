@@ -39,7 +39,6 @@ function TodoForm({ todoType, saveTodo, itemType }) {
         id="priority-select"
         onChange={(e) => setPriority(e.target.value)}
       >
-        <option value="">--Please choose an option--</option>
         <option value="normal">Normal</option>
         <option value="high">High</option>
         <option value="low">Low</option>

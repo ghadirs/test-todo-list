@@ -8,6 +8,19 @@
 }
 
 .box__form.row > .col > form > input {
-  padding: 0;
+  padding: 0.5rem;
   border: 0px;
+}
+
+.box__form {
+}
+
+.box__form > .col > form > button {
+  border: none;
+  margin-left: 10px;
+}
+
+#priority-select {
+  border: none;
+  margin-left: 10px;
 }
