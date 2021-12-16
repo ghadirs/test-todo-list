@@ -13,5 +13,13 @@
 }
 
 .box__list {
-  background-color: #eeeeee;
+}
+.list__item.high {
+  background-color: #ff5555;
+}
+.list__item.low {
+  background-color: #377dff;
+}
+.list__item.normal {
+  background-color: #f9f9f9;
 }

@@ -5,8 +5,6 @@ import "./App.css";
 
 // const MyWidget = ({ name }) => <div>{name}</div>;
 function App() {
-  const [Items, updateItems] = useState([]);
-
   // // copied code
   // /*
   //  * Moves an item from one list to another list.
@@ -69,6 +67,8 @@ function App() {
   // const [state, setState] = useState([getItems(10)]);
 
   //
+
+  const [Items, updateItems] = useState([]);
   let todoItems = [];
   let doneItems = [];
   const items = Array.from(Items);

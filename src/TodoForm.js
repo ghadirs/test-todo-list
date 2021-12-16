@@ -5,6 +5,7 @@ import "./TodoForm.css";
 
 function TodoForm({ todoType, saveTodo, itemType }) {
   const [value, setValue] = useState("");
+  const [priority, setPriority] = useState("");
 
   const handleSubmit = (value) => {
     return (e) => {
@@ -14,7 +15,10 @@ function TodoForm({ todoType, saveTodo, itemType }) {
         name: value,
         type: todoType,
         id: `${value + Math.random()}`,
+        priority,
       };
+      console.log(priority);
+
       // save item
       saveTodo(final);
 
@@ -30,6 +34,16 @@ function TodoForm({ todoType, saveTodo, itemType }) {
         value={value}
         placeholder="add name..."
       />
+      <select
+        name="priority"
+        id="priority-select"
+        onChange={(e) => setPriority(e.target.value)}
+      >
+        <option value="">--Please choose an option--</option>
+        <option value="normal">Normal</option>
+        <option value="high">High</option>
+        <option value="low">Low</option>
+      </select>
       <button>+</button>
     </form>
   );

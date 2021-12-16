@@ -4,18 +4,18 @@ import { Draggable } from "react-beautiful-dnd";
 import "./TodoItems.css";
 import TodoForm from "./TodoForm";
 
-function TodoItems({ todoType, todos, saveTodo, deleteTodo }) {
+function TodoItems({ priority, todoType, todos, saveTodo, deleteTodo }) {
   return (
     <div id="todo-box" className="col__content todo__box">
       <div className="container">
         <div className="box__list row">
           <div className="list__title col">
-            {todos.map(({ id, name, type }, index) => (
+            {todos.map(({ id, name, priority }, index) => (
               <Draggable key={id} draggableId={id} index={index}>
                 {(provided) => (
                   <div
                     ref={provided.innerRef}
-                    className="list__item"
+                    className={`list__item ${priority}`}
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                   >
@@ -30,7 +30,11 @@ function TodoItems({ todoType, todos, saveTodo, deleteTodo }) {
       </div>
       <div className="box__form row">
         <div className="col">
-          <TodoForm todoType={todoType} saveTodo={saveTodo} />
+          <TodoForm
+            priority={priority}
+            todoType={todoType}
+            saveTodo={saveTodo}
+          />
         </div>
       </div>
     </div>

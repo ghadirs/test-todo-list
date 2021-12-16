@@ -10,35 +10,3 @@
 .root-container > .row > .col {
   margin: 1rem 1.5rem;
 }
-
-/*  */
-
-.grid {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  user-select: none;
-  display: grid;
-  grid-gap: 1px;
-  grid-template-columns: repeat(2, auto);
-}
-
-.box {
-  padding: 35px;
-  background-color: #fff;
-  resize: horizontal;
-  overflow: auto;
-  position: relative;
-}
-
-[draggable="true"] {
-  cursor: move;
-}
-
-.to {
-  transform: scale(1.025);
-  transition: all 0.5s;
-  border: 1px dashed #000;
-  background-color: #fff;
-  padding: 40px;
-}
