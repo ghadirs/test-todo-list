@@ -1,15 +1,22 @@
 import React from "react";
 import { useState } from "react";
+// import { v1 } from "uuid";
 import "./TodoForm.css";
 
-function TodoForm({ saveTodo }) {
+function TodoForm({ todoType, saveTodo, itemType }) {
   const [value, setValue] = useState("");
 
   const handleSubmit = (value) => {
     return (e) => {
       e.preventDefault();
+
+      const final = {
+        name: value,
+        type: todoType,
+        id: `${value + Math.random()}`,
+      };
       // save item
-      saveTodo(value);
+      saveTodo(final);
 
       // clear field
       setValue("");
@@ -22,7 +29,6 @@ function TodoForm({ saveTodo }) {
         onChange={(e) => setValue(e.target.value)}
         value={value}
         placeholder="add name..."
-        onClick={() => console.log(value)}
       />
       <button>+</button>
     </form>
